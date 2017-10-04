@@ -139,9 +139,38 @@ header {
 	background: url("../img/first-bg.png") center no-repeat;
 }
 
+.block2 {
+	float: left;
+	width: 20%;
+}
+
 .block3 {
 	float: left;
 	width: 30%;
+}
+
+.block14 {
+	float: left;
+	width: 14%;
+	text-align: center;
+
+	& p {
+		font-family: OpenSansRegular;
+		font-size: 22px;
+		padding-top: 10px;
+		line-height: 30px;
+	}
+}
+
+
+.block5-l {
+	float: left;
+	width: 50%;
+}
+
+.block5-r {
+	float: right;
+	width: 50%;
 }
 
 .block33 {
@@ -219,13 +248,34 @@ header {
 }
 
 .second,
-.fourth {
+.fourth,
+.six,
+.eight {
 	background: #f9f9f9;
 	padding: 50px 0;
 }
 
+.seven {
+	padding: 50px 0;
+	background: #f2f2f2;
+	& p {
+		font-family: OpenSansRegular;
+		font-size: 18px;
+		line-height: 25px;
+		padding-top: 30px;
+		text-align: center;
+
+		&:last-child {
+			padding-bottom: 25px;
+		}
+	}
+}
+
 .second h2,
-.fourth h2 {
+.fourth h2,
+.six h2,
+.seven h2,
+.eight h2 {
 	font-family: OpenSansRegular;
 	font-size: 42px;
 	color: #515462;
@@ -239,4 +289,164 @@ header {
 	color: #000;
 	line-height: 30px;
 	text-align: center;
+}
+
+.ic-search,
+.question-text,
+.question-button {
+	float: left;
+}
+
+.fourth-content {
+	padding-top: 30px;
+}
+
+.advantage {
+	text-align: center;
+	& p {
+		font-family: OpenSansRegular;
+		font-size: 22px;
+		line-height: 30px;
+		padding-top: 10px;
+	}
+}
+
+.caption1 h2 {
+	font-family: OpenSansRegular;
+	font-size: 42px;
+	color: #515462;
+	text-align: left;
+}
+
+.fifth {
+	background: url("../img/fifth-bg.png") center no-repeat;
+	padding: 50px 0;
+
+	& .list-mission {
+		font-family: OpenSansRegular;
+		font-size: 18px;
+		list-style: none;
+		padding-left: 0;
+
+		& li {
+			padding-top: 10px;
+
+		}
+
+		& li:before {
+			content: ">";
+			height: 20px;
+			width: 20px;
+		}
+
+	}
+}
+
+.six-content {
+	padding-top: 30px;
+}
+
+.line-1 {
+	border: 1px solid #cccfd0;
+	width: 110px;
+	margin-top: 60px;
+	transform: rotate(25deg);
+}
+
+.line-2 {
+	border: 1px solid #cccfd0;
+	width: 110px;
+	margin: 0 auto;
+	margin-top: 60px;
+	transform: rotate(-25deg);
+}
+
+.six-button {
+	margin-top: 30px;
+	text-align: center;
+}
+
+.seven-content,
+.eight-content {
+	padding-top: 25px;
+}
+
+.seven-link {
+	text-align: center;
+}
+
+.seven-link a {
+	text-decoration: none;
+}
+
+.seven-link img {
+
+}
+
+.seven-link span {
+	font-family: OpenSansRegular;
+	font-size: 18px;
+	color: #fff;
+	position: absolute;
+	padding-top: 45px;
+	margin-left: -160px;
+}
+
+.link-six {
+	padding: 18px 20px;
+	background: #ff3936;
+	color: #fff;
+	border-radius: 50px;
+	font-family: OpenSansSemibold;
+	font-size: 18px;
+	text-decoration: none;
+	text-transform: uppercase;
+	display: inline-block;
+}
+
+.ic-search,
+.question-button {
+	padding: 1% 0;
+}
+
+.question {
+	border: 1px solid #ff3936;
+	border-radius: 5px;
+	border-bottom: none;
+	padding: 10px 30px;
+	display: inline-flex;
+}
+
+.question-text {
+	font-family: OpenSansRegular;
+	font-size: 22px;
+	padding-left: 10px;
+	padding-right: 20px;
+}
+
+#question-link {
+	background: none;
+	font-family: OpenSansRegular;
+	font-size: 22px;
+	border: 1px solid #ff3936;
+	border-radius: 50px;
+	padding: 5px 15px;
+	cursor: pointer;
+	display: inline-flex;
+	text-decoration: none;
+	color: #000;
+}
+
+.question-answer {
+	border: 1px solid #ff3936;
+	padding: 10px 35px;
+}
+
+.question-answer p {
+	font-family: OpenSansRegular;
+	font-size: 18px;
+}
+
+#question-link i {
+	padding: 5px 0;
 }
