@@ -2,7 +2,14 @@
 	<head>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta charset="utf-8">
+		<link rel="stylesheet" href="css/jquery-ui.min.css">
+		<link rel="stylesheet" href="css/owl.carousel.css">
+		<link rel="stylesheet" href="css/owl.theme.default.css">
 		<link rel="stylesheet" href="css/styles.css">
+		<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+		<script type="text/javascript" src="js/jquery-ui.min.js"></script>
+		<script src="http://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+		<script type="text/javascript" src="js/owl.carousel.js"></script>
 		<script src="https://use.fontawesome.com/0ff0d824bf.js"></script>
 		<script type="text/javascript" src="js/common.js"></script>
 	</head>
@@ -22,16 +29,48 @@
 						<li><a href="#">О компании</a></li>
 						<li><a href="#">Услуги и Цены</a></li>
 						<li><a href="#">Визовая поддержка</a></li>
-						<li><a href="#">Полезная информация</a></li>
+						<li class="slide-menu"><a href="#">Полезная информация <i class="fa fa-angle-down" aria-hidden="true"></i></a>
+							<ul class="podmenu-1">
+								<li><a href="#">Вопросы и Ответы</a></li>
+								<li><a href="#">Отзывы клиентов</a></li>
+								<li><a href="#">Статьи и Обзоры</a></li>
+								<li><a href="#">Новости</a></li>
+							</ul></li>
 						<li><a href="#">Реклама на сайте</a></li>
 						<li><a href="#">Контакты</a></li>
 					</ul>
 				</div>
 				<div class="menu-2">
 					<ul class="nav-menu-2 clearfix">
-						<li><a href="#">Обучение по странам</a></li>
-						<li><a href="#">Спецпредложение</a></li>
-						<li><a href="#">Обучение в Москве</a></li>
+						<li class="slide-menu"><a href="#">Обучение по странам <i class="fa fa-angle-down" aria-hidden="true"></i></a>
+							<div class="teaching-country">
+								<ul class="podmenu-2">
+									<li><a href="#"><img src="img/m-austria.png" alt="">Австрия</a></li>
+									<li><a href="#"><img src="img/m-england.png" alt="">Великобритания</a></li>
+									<li><a href="#"><img src="img/m-belgium.png" alt="">Бельгия</a></li>
+									<li><a href="#"><img src="img/m-germany.png" alt="">Германия</a></li>
+									<li><a href="#"><img src="img/m-ireland.png" alt="">Ирландия</a></li>
+									<li><a href="#"><img src="img/m-spain.png" alt="">Испания</a></li>
+									<li><a href="#"><img src="img/m-portugal.png" alt="">Португалия</a></li>
+									<li><a href="#"><img src="img/m-canada.png" alt="">Канада</a></li>
+								</ul>
+								<ul class="podmenu-2">
+									<li><a href="#"><img src="img/m-cyprus.png" alt="">Кипр</a></li>
+									<li><a href="#"><img src="img/m-china.png" alt="">Китай</a></li>
+									<li><a href="#"><img src="img/m-malta.png" alt="">Мальта</a></li>
+									<li><a href="#"><img src="img/m-netherlands.png" alt="">Нидерланды</a></li>
+									<li><a href="#"><img src="img/m-usa.png" alt="">США</a></li>
+									<li><a href="#"><img src="img/m-france.png" alt="">Франция</a></li>
+									<li><a href="#"><img src="img/m-switzerland.png" alt="">Швейцария</a></li>
+								</ul>
+							</div></li>
+						<li><a class="special" href="#">Спецпредложение </a></li>
+						<li class="slide-menu"><a href="#">Обучение в Москве <i class="fa fa-angle-down" aria-hidden="true"></i></a>
+							<ul class="podmenu-1">
+								<li><a href="#">Курсы для детей</a></li>
+								<li><a href="#">Курсы для взрослых</a></li>
+								<li><a href="#">Подготовка к ЕГЭ</a></li>
+							</ul></li>
 					</ul>
 					<div class="soc-ic">
 						<ul class="list-share clearfix">
@@ -63,17 +102,73 @@
 			<div class="block3">
 				<div class="form-program">
 					<div class="form-caption">
-						<h5>Подобрать подходящую рекламу</h5>
+						<h5>Подобрать подходящую программу</h5>
+							<div class="content-form clearfix">
+								<div class="selectboxss1 clearfix">
+									<div class="selectboxss inp-shadow" id="selectBoxCountry" style="position:absolute !important; z-index:1;height:37px;">
+										<input type="hidden" name="" class="hds" value="">
+										<div class="selectboxssvalue"><span>Страна</span><i class="s-arr fa fa-angle-down" aria-hidden="true"></i></div>
+										<ul class="selectboxssmenu">
+											<li class="selectoption" data-value="1">Австрия</li>
+											<li class="selectoption" data-value="2">Англия</li>
+											<li class="selectoption" data-value="3">Бельгия</li>
+											<li class="selectoption" data-value="4">Германия</li>
+											<li class="selectoption" data-value="5">Ирландия</li>
+											<li class="selectoption" data-value="6">Испания</li>
+											<li class="selectoption" data-value="8">Канада</li>
+											<li class="selectoption" data-value="9">Кипр</li>
+											<li class="selectoption" data-value="10">Китай</li>
+											<li class="selectoption" data-value="10">Мальта</li>
+											<li class="selectoption" data-value="11">Нидерланды</li>
+											<li class="selectoption" data-value="12">Португалия</li>
+											<li class="selectoption" data-value="12">США</li>
+											<li class="selectoption" data-value="12">Уэльс</li>
+											<li class="selectoption" data-value="13">Франция</li>
+											<li class="selectoption" data-value="14">Швейцария</li>
+											<li class="selectoption" data-value="14">Шотландия</li>
+										</ul>
+									</div>
+								</div>
+
+								<div class="selectboxss2 clearfix">
+									<div class="selectboxss inp-shadow" id="selectBoxProgramm" style="position:absolute !important; z-index:1;height:37px;">
+										<input type="hidden" name="" class="hds" value="">
+										<div class="selectboxssvalue"><span>Программа</span><i class="s-arr fa fa-angle-down" aria-hidden="true"></i></div>
+										<ul class="selectboxssmenu">
+											<li class="selectoption" data-value="1">Языковые курсы для детей</li>
+											<li class="selectoption" data-value="3">Языковые курсы для взрослых</li>
+											<li class="selectoption" data-value="4">Среднее образование</li>
+											<li class="selectoption" data-value="5">Подготовка к университету</li>
+											<li class="selectoption" data-value="6">Высшее образование</li>
+										</ul>
+									</div>
+								</div>
+
+								<div class="toddler">
+									<span>Возраст</span>
+									<div class="age-b">
+										<div class="view-slider"></div>
+										<div id="begun-age" class="ui-slider ui-corner-all ui-slider-horizontal ui-widget ui-widget-content">
+											<span tabindex="0" class="ui-slider-handle" style="left: 72.973%;">
+												<div class="view-slider"></div></span></div>
+										<input type="hidden" name="age-val" id="inp-age" value="30">
+									</div>
+								</div>
+
+								<div class="programm-calc">
+									<a href="#" class="programm-calc-button"><i class="fa fa-check-circle-o" aria-hidden="true"></i> Подобрать</a>
+								</div>
+							</div>
+						</div>
 					</div>
-				</div>
 			</div>
 			<div class="block7">
 				<div class="content-banner1">
 					<h2>Обучение за рубежом</h2>
 
 					<div class="button-banners">
-						<a href="#" class="button-banner">Заявка на обучение</a>
-						<a href="#" class="button-banner">Перезвоните мне</a>
+						<a href="#" class="button-banner-1">Заявка на обучение</a>
+						<a href="#" class="button-banner-2">Перезвоните мне</a>
 					</div>
 				</div>
 			</div>
@@ -100,9 +195,63 @@
 	</section>
 
 	<section class="third">
-		<div class="container clearfix">
+			<div id="carousel-1" class="owl-carousel owl-theme">
+				<div class="carousel-1-slide">
+					<div class="slide-img"><img src="img/third-bg.png" alt=""></div>
+					<div class="slide-content">
+						<div class="third-content">
+							<h2>Программа интеграции: Учиться
+								в средней школе Англии, США, Канады в течение месяца, триместра, года…</h2>
+							<p>Ваш ребенок будет учиться вместе с английскими
+								школьниками, носить школьную форму данного
+								учебного заведения, получит возможность погрузиться
+								в Британскую систему образования.</p>
+							<a href="#" class="more">Подробнее</a>
+						</div>
+					</div>
+				</div>
 
-		</div>
+				<div class="carousel-1-slide">
+					<div class="slide-img"><img src="img/third-bg.png" alt=""></div>
+					<div class="slide-content">
+						<div class="third-content">
+							<h2>Программа интеграции: Учиться
+								в средней школе Англии, США, Канады в течение месяца, триместра, года…</h2>
+							<p>Ваш ребенок будет учиться вместе с английскими
+								школьниками, носить школьную форму данного
+								учебного заведения, получит возможность погрузиться
+								в Британскую систему образования.</p>
+							<a href="#" class="more">Подробнее</a>
+						</div>
+					</div>
+				</div>
+
+				<div class="carousel-1-slide">
+					<div class="slide-img"><img src="img/third-bg.png" alt=""></div>
+					<div class="slide-content">
+						<div class="third-content">
+							<h2>Программа интеграции: Учиться
+								в средней школе Англии, США, Канады в течение месяца, триместра, года…</h2>
+							<p>Ваш ребенок будет учиться вместе с английскими
+								школьниками, носить школьную форму данного
+								учебного заведения, получит возможность погрузиться
+								в Британскую систему образования.</p>
+							<a href="#" class="more">Подробнее</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="slide-form">
+				<div class="third-form">
+					<div class="third-form-content">
+						<h3>Запишитесь прямо сейчас!</h3>
+						<input type="text" placeholder="Ваше имя" />
+						<input type="text" placeholder="+7 (___) ___-__-__" />
+						<input type="submit" value="Отправить заявку" />
+						<p>* Нажимая на кнопку, Вы даете согласие на обработку своих персональных данных</p>
+					</div>
+				</div>
+			</div>
 	</section>
 
 	<section class="fourth">
@@ -157,6 +306,7 @@
 
 	<section class="fifth">
 		<div class="container clearfix">
+			<div class="block5-l"></div>
 			<div class="block5-r">
 				<div class="caption1">
 					<h2>Наша миссия</h2>
@@ -194,35 +344,39 @@
 			<h2>Как мы работаем</h2>
 		</div>
 		<div class="container">
-			<div class="six-content clearfix">
-				<div class="block14">
+			<div class="six-content-1 clearfix">
+				<div class="block24">
 					<img src="img/six-1.png" alt="">
-					<p>Оставляете заявку
-						на сайте</p>
+						<div class="six-content-description">
+							<p>Оставляете заявку
+							на сайте</p>
+						</div>
 				</div>
-				<div class="block14">
+				<div class="block1m">
 					<div class="line-1">
 
 					</div>
 				</div>
-				<div class="block14">
+				<div class="block24">
 					<img src="img/six-2.png" alt="">
-					<p>Мы предлагаем
-						варианты обучения</p>
+						<div class="six-content-description">
+							<p>Мы предлагаем
+								варианты обучения</p>
+						</div>
 				</div>
-				<div class="block14">
+				<div class="block1m">
 					<div class="line-2">
 
 					</div>
 				</div>
-				<div class="block14">
+				<div class="block24">
 					<img src="img/six-3.png" alt="">
 					<p>Вы делаете выбор</p>
 				</div>
-				<div class="block14">
+				<div class="block1m">
 					<div class="line-1"></div>
 				</div>
-				<div class="block14">
+				<div class="block24">
 					<img src="img/six-4.png" alt="">
 					<p>Собираем необходимый
 						комплект документов</p>
@@ -231,36 +385,36 @@
 		</div>
 
 		<div class="container clearfix">
-
+		<div class="vertical-line"></div>
 		</div>
 
 		<div class="container clearfix">
-			<div class="six-content">
-				<div class="block14">
+			<div class="six-content-2">
+				<div class="block24">
 					<img src="img/six-5.png" alt="">
 					<p>Ура! Виза у Вас!
 						Вы едите учиться!</p>
 				</div>
-				<div class="block14">
+				<div class="block1m">
 					<div class="line-2"></div>
 				</div>
-				<div class="block14">
+				<div class="block24">
 					<img src="img/six-6.png" alt="">
 					<p>Подаем документы
 						на визу</p>
 				</div>
-				<div class="block14">
+				<div class="block1m">
 					<div class="line-1"></div>
 				</div>
-				<div class="block14">
+				<div class="block24">
 					<img src="img/six-7.png" alt="">
 					<p>Ура! Вы едите учиться
 						А виза у Вас есть?</p>
 				</div>
-				<div class="block14">
+				<div class="block1m">
 					<div class="line-2"></div>
 				</div>
-				<div class="block14">
+				<div class="block24">
 					<img src="img/six-8.png" alt="">
 					<p>Получаем письмо
 						о зачислении!</p>
@@ -288,31 +442,31 @@
 			<div class="seven-content">
 				<div class="block2">
 					<div class="seven-link">
-						<a href="#"><img src="img/austria.png" alt="">
+						<a class="country" href="#"><img src="img/austria.png" alt="">
 						<span>Австрия</span></a>
 					</div>
 				</div>
 				<div class="block2">
 					<div class="seven-link">
-						<a href="#"><img src="img/united-kingdom.png" alt="">
+						<a class="country" href="#"><img src="img/united-kingdom.png" alt="">
 							<span>Великобритания</span></a>
 					</div>
 				</div>
 				<div class="block2">
 					<div class="seven-link">
-						<a href="#"><img src="img/belgium.png" alt="">
+						<a class="country" href="#"><img src="img/belgium.png" alt="">
 							<span>Бельгия</span></a>
 					</div>
 				</div>
 				<div class="block2">
 					<div class="seven-link">
-						<a href="#"><img src="img/germany.png" alt="">
+						<a class="country" href="#"><img src="img/germany.png" alt="">
 							<span>Германия</span></a>
 					</div>
 				</div>
 				<div class="block2">
 					<div class="seven-link">
-						<a href="#"><img src="img/ireland.png" alt="">
+						<a class="country" href="#"><img src="img/ireland.png" alt="">
 							<span>Ирландия</span></a>
 					</div>
 				</div>
@@ -323,31 +477,31 @@
 			<div class="seven-content">
 				<div class="block2">
 					<div class="seven-link">
-						<a href="#"><img src="img/spain.png" alt="">
+						<a class="country" href="#"><img src="img/spain.png" alt="">
 						<span>Испания</span></a>
 					</div>
 				</div>
 				<div class="block2">
 					<div class="seven-link">
-						<a href="#"><img src="img/portugal.png" alt="">
+						<a class="country" href="#"><img src="img/portugal.png" alt="">
 						<span>Португалия</span></a>
 					</div>
 				</div>
 				<div class="block2">
 					<div class="seven-link">
-						<a href="#"><img src="img/canada.png" alt="">
+						<a class="country" href="#"><img src="img/canada.png" alt="">
 						<span>Канада</span></a>
 					</div>
 				</div>
 				<div class="block2">
 					<div class="seven-link">
-						<a href="#"><img src="img/cyprus.png" alt="">
+						<a class="country" href="#"><img src="img/cyprus.png" alt="">
 						<span>Кипр</span></a>
 					</div>
 				</div>
 				<div class="block2">
 					<div class="seven-link">
-						<a href="#"><img src="img/china.png" alt="">
+						<a class="country" href="#"><img src="img/china.png" alt="">
 						<span>Китай</span></a>
 					</div>
 				</div>
@@ -358,31 +512,31 @@
 			<div class="seven-content">
 				<div class="block2">
 					<div class="seven-link">
-						<a href="#"><img src="img/malta.png" alt="">
+						<a class="country" href="#"><img src="img/malta.png" alt="">
 						<span>Мальта</span></a>
 					</div>
 				</div>
 				<div class="block2">
 					<div class="seven-link">
-						<a href="#"><img src="img/netherlands.png" alt="">
+						<a class="country" href="#"><img src="img/netherlands.png" alt="">
 						<span>Нидерланды</span></a>
 					</div>
 				</div>
 				<div class="block2">
 					<div class="seven-link">
-						<a href="#"><img src="img/united-states.png" alt="">
+						<a class="country" href="#"><img src="img/united-states.png" alt="">
 						<span>США</span></a>
 					</div>
 				</div>
 				<div class="block2">
 					<div class="seven-link">
-						<a href="#"><img src="img/france.png" alt="">
+						<a class="country" href="#"><img src="img/france.png" alt="">
 						<span>Франция</span></a>
 					</div>
 				</div>
 				<div class="block2">
 					<div class="seven-link">
-						<a href="#"><img src="img/switzerland.png" alt="">
+						<a class="country" href="#"><img src="img/switzerland.png" alt="">
 						<span>Швейцария</span></a>
 					</div>
 				</div>
@@ -404,12 +558,61 @@
 							в Англии. Это реально?</p>
 					</div>
 					<div class="question-button">
-						<a href="#" id="question-link">Ответ <i class="fa fa-chevron-down fa-fw" aria-hidden="true"></i></a>
+						<div id="question-link-1">Ответ  <i class="fa fa-angle-down" aria-hidden="true"></i></div>
 					</div>
 				</div>
-				<div class="question-answer">
+				<div class="question-answer-1">
 				<p>- Да, это реально, только не прямое поступление в университет , а через программу подготовки – Foundation course. Продолжительность курса 1 год, можно учиться в международном колледже, но есть программы Foundation–on-campus. В этом случае Вы будете обучаться на базе конкретного университета. Приходите к нам в офис и мы дадим Вам более подробную консультацию о поступлении в университеты Великобритании.</p>
 			</div>
+			</div>
+
+
+			<div class="eight-content">
+				<div class="question clearfix">
+					<div class="ic-search"><i class="fa fa-question-circle-o fa-2x" aria-hidden="true"></i></div>
+					<div class="question-text">
+						<p>Я заканчиваю школу в этом году в Москве и хотел бы поступать в университет
+							в Англии. Это реально?</p>
+					</div>
+					<div class="question-button">
+						<div id="question-link-2">Ответ  <i class="fa fa-angle-down" aria-hidden="true"></i></div>
+					</div>
+				</div>
+				<div class="question-answer-2">
+					<p>- Да, это реально, только не прямое поступление в университет , а через программу подготовки – Foundation course. Продолжительность курса 1 год, можно учиться в международном колледже, но есть программы Foundation–on-campus. В этом случае Вы будете обучаться на базе конкретного университета. Приходите к нам в офис и мы дадим Вам более подробную консультацию о поступлении в университеты Великобритании.</p>
+				</div>
+			</div>
+
+
+			<div class="eight-content">
+				<div class="question clearfix">
+					<div class="ic-search"><i class="fa fa-question-circle-o fa-2x" aria-hidden="true"></i></div>
+					<div class="question-text">
+						<p>Я заканчиваю школу в этом году в Москве и хотел бы поступать в университет
+							в Англии. Это реально?</p>
+					</div>
+					<div class="question-button">
+						<div id="question-link-3">Ответ  <i class="fa fa-angle-down" aria-hidden="true"></i></div>
+					</div>
+				</div>
+				<div class="question-answer-3">
+					<p>- Да, это реально, только не прямое поступление в университет , а через программу подготовки – Foundation course. Продолжительность курса 1 год, можно учиться в международном колледже, но есть программы Foundation–on-campus. В этом случае Вы будете обучаться на базе конкретного университета. Приходите к нам в офис и мы дадим Вам более подробную консультацию о поступлении в университеты Великобритании.</p>
+				</div>
+			</div>
+
+			<div class="eight-footer">
+				<div class="block1">
+				<a href="#" class="more-questions">Все вопросы</a></div>
+				<div class="block5-l">
+					<div class="right">
+						<h3>Остались вопросы?</h3>
+					</div>
+				</div>
+				<div class="block5-l">
+					<div class="left">
+						<div id="question-add">Задайте нам свой вопрос</div>
+					</div>
+				</div>
 			</div>
 		</div>
 	</section>
@@ -424,7 +627,275 @@
 			<p>Курсы английского в Москве от Language For Life – это высочайшее качество обучения английскому языку, пaродуманная
 				до мелочей организация учебного процесса, разнообразные возможности общения на английском языке.</p>
 		</div>
+
+		<div class="container clearfix">
+			<div class="nine-content clearfix">
+				<div class="block33n clearfix">
+					<div class="nine-block">
+						<div class="nine-block-img clearfix"><img src="img/nine-1.png" alt=""></div>
+						<div class="nine-block-caption">
+							<h3>Курсы для детей</h3>
+						</div>
+						<div class="nine-button"><a href="#" id="enroll-1">Записаться</a></div>
+					</div>
+				</div>
+				<div class="block33n clearfix">
+					<div class="nine-block">
+						<div class="nine-block-img clearfix"><img src="img/nine-2.png" alt=""></div>
+						<div class="nine-block-caption">
+							<h3>Курсы для взрослых</h3>
+						</div>
+						<div class="nine-button"><a href="#" id="enroll-2">Записаться</a></div>
+					</div>
+				</div>
+				<div class="block33n clearfix">
+					<div class="nine-block">
+						<div class="nine-block-img clearfix"><img src="img/nine-3.png" alt=""></div>
+						<div class="nine-block-caption">
+							<h3>Подготовка к ЕГЭ</h3>
+						</div>
+						<div class="nine-button"><a href="#" id="enroll-3">Записаться</a></div>
+					</div>
+				</div>
+			</div>
+		</div>
 	</section>
+
+	<section class="tenth">
+		<div class="container clearfix">
+			<h2>Личный опыт наших сотрудников</h2>
+		</div>
+
+		<div class="container clearfix">
+			<div id="carousel-2" class="owl-carousel owl-theme">
+				<div class="tenth-slide">
+					<div class="block8">
+						<div class="tenth-slide-img">
+							<div class="tenth-slide-img-university-1"></div>
+							<div class="tenth-slide-img-country-1"></div>
+						</div>
+						<div class="tenth-slide-description">
+							<h3>Наталья К., 14 лет <br>Училась в ATC, Maynooth University, 2016 год </h3>
+							<p>Все очень понравилось, замечательная практика английского языка, большое количество интересных познавательных экскурсий! Большая и красивая территория! Дружелюбное отношение со стороны педагогов и обслуживающего персонала.</p>
+							<a href="#">Подробнее...</a>
+						</div>
+					</div>
+
+					<div class="block8-mod">
+						<div class="tenth-slide-img">
+							<div class="tenth-slide-img-university-11"></div>
+							<div class="tenth-slide-img-country-11"></div>
+						</div>
+						<div class="tenth-slide-description">
+							<h3>Наталья К., 14 лет <br>Училась в ATC, Maynooth University, 2016 год </h3>
+							<p>Все очень понравилось, замечательная практика английского языка, большое количество интересных познавательных экскурсий! Большая и красивая территория! Дружелюбное отношение со стороны педагогов и обслуживающего персонала.</p>
+							<a href="#">Подробнее...</a>
+						</div>
+					</div>
+				</div>
+
+				<div class="tenth-slide">
+					<div class="block8">
+						<div class="tenth-slide-img">
+							<div class="tenth-slide-img-university-1"></div>
+							<div class="tenth-slide-img-country-1"></div>
+						</div>
+						<div class="tenth-slide-description">
+							<h3>Наталья К., 14 лет <br>Училась в ATC, Maynooth University, 2016 год </h3>
+							<p>Все очень понравилось, замечательная практика английского языка, большое количество интересных познавательных экскурсий! Большая и красивая территория! Дружелюбное отношение со стороны педагогов и обслуживающего персонала.</p>
+							<a href="#">Подробнее...</a>
+						</div>
+					</div>
+
+					<div class="block8-mod">
+						<div class="tenth-slide-img">
+							<div class="tenth-slide-img-university-11"></div>
+							<div class="tenth-slide-img-country-11"></div>
+						</div>
+						<div class="tenth-slide-description">
+							<h3>Наталья К., 14 лет <br>Училась в ATC, Maynooth University, 2016 год </h3>
+							<p>Все очень понравилось, замечательная практика английского языка, большое количество интересных познавательных экскурсий! Большая и красивая территория! Дружелюбное отношение со стороны педагогов и обслуживающего персонала.</p>
+							<a href="#">Подробнее...</a>
+						</div>
+					</div>
+				</div>
+
+				<div class="tenth-slide">
+					<div class="block8">
+						<div class="tenth-slide-img">
+							<div class="tenth-slide-img-university-1"></div>
+							<div class="tenth-slide-img-country-1"></div>
+						</div>
+						<div class="tenth-slide-description">
+							<h3>Наталья К., 14 лет <br>Училась в ATC, Maynooth University, 2016 год </h3>
+							<p>Все очень понравилось, замечательная практика английского языка, большое количество интересных познавательных экскурсий! Большая и красивая территория! Дружелюбное отношение со стороны педагогов и обслуживающего персонала.</p>
+							<a href="#">Подробнее...</a>
+						</div>
+					</div>
+
+					<div class="block8-mod">
+						<div class="tenth-slide-img">
+							<div class="tenth-slide-img-university-11"></div>
+							<div class="tenth-slide-img-country-11"></div>
+						</div>
+						<div class="tenth-slide-description">
+							<h3>Наталья К., 14 лет <br>Училась в ATC, Maynooth University, 2016 год </h3>
+							<p>Все очень понравилось, замечательная практика английского языка, большое количество интересных познавательных экскурсий! Большая и красивая территория! Дружелюбное отношение со стороны педагогов и обслуживающего персонала.</p>
+							<a href="#">Подробнее...</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="eleventh">
+		<div class="container clearfix">
+			<h2>О нас</h2>
+			<p>Language For Life – предлагает полный спектр услуг по организации поездок по обучению за рубежом, включая консультации по выбору курса и учебного заведения, опекунские услуги, мониторинг во время учебы за границей, помощь в оформлении
+				виз и документов, бронирование авиабилетов и приобретение медицинских страховок.
+			</p>
+		</div>
+
+		<div class="container clearfix">
+			<div class="block5-l">
+				<div class="eleventh-img">
+					<iframe src="https://www.youtube.com/embed/Fp6ziyq6PVs" frameborder="0" allowfullscreen=""></iframe>
+				</div>
+			</div>
+			<div class="block5-l">
+				<div class="eleventh-description">
+					<p>Все предлагаемые колледжи и школы имеют государственную аккредитацию, высокие стандарты обучения, и огромный опыт работы с иностранными студентами. Мы сотрудничаем только с теми учебными заведениями, которые посещали лично или встречались с администрацией учебного заведения во время выставок (Workshops) в Москве или Лондоне. Важно и то, что сотрудники компании имеют личный опыт длительного проживания и обучения в языковых школах, колледжах, университетах Германии и Великобритании, а также обучения своих детей в академических школах Великобритании.
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="twelfth">
+		<div class="container">
+			<div class="twelfth-caption clearfix">
+				<div class="block5-l">
+					<div class="center">
+						<h2 class="new-caption active-news-caption">Новости</h2>
+					</div>
+				</div>
+				<div class="block5-l">
+					<div class="center">
+						<h2 class="state-caption">Статьи и обзоры</h2>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="container clearfix">
+			<div class="news active-news">
+			<div class="block5-l">
+				<div class="eleventh-block">
+					<div class="new-img"><img src="img/new-1.png" alt=""></div>
+					<div class="new-description">
+						<h3>Лучшая Новости языковая школа Великобритании</h3>
+						<p>Языковая школа OISE была удостоена награды Лучшей школы английского языка в Великобритании (Best English Language School in the UK).
+							</p>
+						<a href="#">Подробнее...</a>
+					</div>
+				</div>
+			</div>
+			<div class="block5-l">
+				<div class="eleventh-block">
+					<div class="new-img"><img src="img/state-1.png" alt=""></div>
+					<div class="new-description">
+						<h3>Лучшая языковая школа Великобритании</h3>
+						<p>Языковая школа OISE была удостоена награды Лучшей школы английского языка в Великобритании (Best English Language School in the UK).
+						</p>
+						<a href="#">Подробнее...</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+			<div class="states">
+				<div class="block5-l">
+					<div class="eleventh-block">
+						<div class="new-img"><img src="img/new-1.png" alt=""></div>
+						<div class="new-description">
+							<h3>Лучшая Статьи языковая школа Великобритании</h3>
+							<p>Языковая школа OISE была удостоена награды Лучшей школы английского языка в Великобритании (Best English Language School in the UK).
+							</p>
+							<a href="#">Подробнее...</a>
+						</div>
+					</div>
+				</div>
+				<div class="block5-l">
+					<div class="eleventh-block">
+						<div class="new-img"><img src="img/state-1.png" alt=""></div>
+						<div class="new-description">
+							<h3>Лучшая языковая школа Великобритании</h3>
+							<p>Языковая школа OISE была удостоена награды Лучшей школы английского языка в Великобритании (Best English Language School in the UK).
+							</p>
+							<a href="#">Подробнее...</a>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="block1 center">
+				<a href="#" class="more-news"> <i class="fa fa-check-circle-o" aria-hidden="true"></i> Все новости</a>
+			</div>
+		</div>
+	</section>
+
+	<section class="map">
+			<div id="map" scroll="false" ></div>
+		</div>
+	</section>
+
+	<section class="thirteenth">
+		<div class="container clearfix">
+			<h2>Наши партнеры и аккредитации</h2>
+		</div>
+	</section>
+
+
+	<footer>
+		<div class="container clearfix">
+			<div class="block7">
+				<ul class="list-footer-1">
+					<li><a href="#">Языковые курсы для детей</a></li>
+					<li><a href="#">Языковые курсы для взрослых</a></li>
+					<li><a href="#">Среднее образование</a></li>
+					<li><a href="#">Подготовка к университету</a></li>
+					<li><a href="#">Высшее образование</a></li>
+					<li><img src="img/footer-brans.png" alt=""></li>
+				</ul>
+			</div>
+			<div class="block3">
+				<ul class="list-footer-2">
+					<li>МЫ РАБОТАЕМ С ПОНЕДЕЛЬНИКА ПО ПЯТНИЦУ </li>
+					<li>С 10.00 ДО 19.00, В СУББОТУ С 11.00 ДО 19.00</li>
+					<li>НАШИ ТЕЛЕФОНЫ:</li>
+					<li>+7 (495) 971 55 20 </li>
+					<li>+7 (495) 971 55 30 </li>
+					<li>+7 (915) 430 67 44 (С 10.00 ДО 20.00, 7 ДНЕЙ В НЕДЕЛЮ)</li>
+					<li>E-MAIL: INFO@LANGUAGEFORLIFE.RU</li>
+				</ul>
+				<ul class="footer-share">
+					<li><a href="#"></a></li>
+					<li><a href="#"></a></li>
+					<li><a href="#"></a></li>
+					<li><a href="#"></a></li>
+					<li><a href="#"></a></li>
+				</ul>
+			</div>
+
+			<div class="block1">
+				<div class="footer-description">
+					<p>Все материалы данного сайта являются объектами авторского права, в том числе дизайн. Запрещается копирование, распространение, в том числе путем копирования на другие сайты и ресурсы в Интернете или любое иное использование информации и объектов без предварительного согласия правообладателя «Language For Life».</p>
+					<span>LANGUAGE FOR LIFE © 2008-2017</span>
+				</div>
+			</div>
+		</div>
+	</footer>
 		
 	</body>
 </html>
